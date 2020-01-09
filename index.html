@@ -1,0 +1,96 @@
+<h1>1</h1>
+<div id="app">
+  {{ message }}
+</div>
+
+<h1>2</h1>
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dinamically bound title !
+  </span>
+</div>
+
+<h1>3</h1>
+<div id="app-3">
+  <span v-if="seen">Now you seeme</span>
+</div>
+
+<h1>4</h1>
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+<h1>5</h1>
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<h1>6</h1>
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<h1>7 List</h1>
+<div id="app-7">
+  <ol>
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id"
+    ></todo-item>
+  </ol>
+  <input v-model="message">
+  <button @click="addText">Create</button>
+  <button @click="deleteText">Delete</button>
+</div>
+
+<h1>8 computed</h1>
+<div id="app-8">
+  <p>{{ datetime }}</p>
+</div>
+
+<h1>9 if-else</h1>
+<div id="app-9">
+  <button @click="countUp">up</button>
+  <button @click="countDown">down</button>
+  <p>{{ count }}</p>
+  <p v-if="isMultipleOf4">4の倍数</p>
+  <p v-else-if="isMultipleOf2">偶数</p>
+  <p v-else>奇数</p>
+</div>
+
+<h1>10 FizzBuzz</h1>
+<div id="app-10">
+  <button @click="countUp">up</button>
+  <button @click="countDown">down</button>
+  <p>{{ count }}</p>
+  <p>{{ fizzBuzz }}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./index.js"></script>
